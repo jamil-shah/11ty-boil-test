@@ -5,4 +5,5 @@ module.exports = function(eleventyConfig) {
     return `<div class="alert">${message}</div>`;
   eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addPassthroughCopy("styles");
+});
 };
