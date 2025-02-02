@@ -1,16 +1,22 @@
 body {
     font-family: Helvetica, sans-serif;
     color: #EAE8FF;
-    background: #2D3142;
-    padding: 0 40px;
+    background: #1A1C2C;
+    padding: 20px;
     text-align: center;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 nav {
-    margin: 40px auto 0 auto;
-    width: 250px;
+    margin: 20px auto;
+    width: 300px;
     border-radius: 50px;
     background: #212431;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.6);
 }
 
 nav ul {
@@ -27,24 +33,95 @@ nav ul li {
 
 nav ul li a {
     display: inline-block;
-    padding: 20px;
+    padding: 15px 20px;
     color: #EAE8FF;
     text-decoration: none;
     font-size: 1.2em;
+    transition: background 0.3s ease, color 0.3s ease;
+    border-radius: 25px;
 }
 
 h1 {
-    font-size: 8em;
-    letter-spacing: -2px;
+    font-size: 4em;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    color: #EAE8FF;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
 }
 
 h1 strong {
-    background: rgb(34,193,195);
     background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+h2, h3 {
+    color: #FFD700;
+    margin: 15px 0;
+}
+main {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #2D3142;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+.alert {
+    background: #FF4C4C;
+    color: white;
+    padding: 15px;
+    border: 2px solid #FFD700;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 8px;
+    animation: pulse 1.5s infinite alternate;
+}
+@keyframes pulse {
+    from {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+    to {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+}
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    font-style: italic;
+    color: #A9A9A9;
+}
 
 img.about {
-    opacity: 0.5;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+img.about:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+a {
+    color: #34ace0;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FFD700;
+}
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3em;
+    }
+    nav {
+        width: 90%;
+    }
+    main {
+        padding: 15px;
+    }
 }
